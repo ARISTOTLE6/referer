@@ -1,0 +1,199 @@
+{%extends 'base.html' %}
+
+        {%load static%}  
+        {%load staticfiles%} 
+
+        {%block content%}
+        <link rel="stylesheet" href="{%static 'css/form.css' %}">
+
+
+
+
+
+
+
+    
+
+
+
+        <form class="form-style-9" style="
+        background: black;
+
+        background-size:cover;border-top:89px;border-right:89px;border-bottom:89px;border-width:8px"  action="/update/{{report_Update.id}}/" method="POST">
+        {% csrf_token %}
+
+
+        <a class="a_link" title="close form" href="/" style="background-color: #4e73df;
+        background: #0f8a9d;
+        background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+        background-size: cover;text-decoration: none;margin-left:90%">X</a>
+
+        <ul>
+
+        <li>
+        <h1 style="color:white">UPDATE  REPORT</h1>
+        </li>
+
+
+        <li  style=" color: white;">
+
+
+
+
+        <i class="fas fa-certificate  ">   UNI-AFRIKA EDUCATIONAL MONTHLY PROGRESS REPORT</i>
+
+
+
+
+        </li>
+        <li>
+
+        <input    type="text"name="" value="{{report_Update.student_name}}"    required class="field-style field-split align-left" placeholder="Name of Student" />
+        <input      type="text"name="" value="{{report_Update.subject_name}}"  class="field-style field-split align-right" placeholder="Subject" list="all_subject"/>
+        <datalist   id="all_subject">
+
+        <option value="English language">
+        <option value="French Language">
+        <option value="Literacy (Jolly Phonics)">
+        <option value="Maths">
+        <option value="Numeracy">
+        <option value="Basic Science ">
+        <option value="French">
+        <option value="Physics(checkpoint)">
+        <option value="Chemistry (checkpoint)">        
+        <option value="Biology (checkpoint)">        
+        <option value="Further Maths">        
+        <option value="Economics">        
+
+
+
+        </datalist>
+
+        </li>
+
+
+        <li>
+        <input       type="text" name="Class" value="{{report_Update.Class}}"   class="field-style field-full align-none" placeholder="Class" />
+        </li>
+        <li>
+        <input       type="text"name="topic_treated" value="{{report_Update.topic_treated}}"   class="field-style field-full align-none" placeholder="Topic Treated" />
+        </li>
+
+
+        <li>
+        <input       type="text"name="challenges" value="{{report_Update.challenges}}"   class="field-style field-full align-none" placeholder="Challenges Before" />
+        </li>
+
+        <li>
+        <input     type="text"name="improvement" value="{{report_Update.improvement}}"   class="field-style field-full align-none" placeholder="Improvement Areas" />
+        </li>
+
+
+
+        <li>
+        <input      type="text"name="projection" value="{{report_Update.projection}}"   class="field-style field-full align-none" placeholder="Projection" />
+        </li>
+
+
+        <li  style=" color: white;">
+
+
+
+
+        <i class="fas fa-certificate  ">   Metrics (over 10)</i>
+
+
+
+
+        </li>
+
+
+        <li>
+        <input    type="text"name="" value="{{report_Update.attitude}}"   class="field-style field-full align-none" placeholder="Attitude to Assignments" />
+        </li>
+
+
+
+
+        <li>
+        <input    type="text"name="" value="{{report_Update.execution}}"  class="field-style field-full align-none" placeholder="Execution of Housework" />
+        </li>
+
+
+
+        <li>
+        <input    type="text"name="" value="{{report_Update.ability}}"  class="field-style field-full align-none" placeholder="Cognitive Ability(reasoning & retention power)" />
+
+        </li>
+
+
+
+        <li  style=" color: white;">
+
+
+
+
+        <i class="fas fa-certificate  ">  General Comments  (Instructor)</i>
+
+
+
+
+        </li>
+
+
+
+        <li>
+        <input      type="text"name="" value="{{report_Update.instructor_name}}"   class="field-style field-full align-none" placeholder="Instructor's Name" />
+
+        </li>
+
+        <li>
+
+        <textarea name="" value="{{report_Update.instructor_comment}}" id="" cols="30" rows="10"   class="field-style field-full align-none" placeholder="Instructor's comments"   ></textarea>
+        </li>
+
+
+        <li  style=" color: white;">
+
+
+
+
+        <i class="fas fa-certificate  "> Administration (Comments)</i>
+
+
+
+
+        </li>
+        <li style="color: white;">
+        To Instructor
+        </li>
+        <li>
+
+        <textarea name="" value="{{report_Update.comment_to_instructor}}" id="" cols="30" rows="10"   class="field-style field-full align-none" placeholder="comments to instructor"   ></textarea>
+        </li>
+
+        <li style="color:white">To Parent</li>
+
+        <li>
+        <textarea name="" value="{{report_Update.comment_to_parent}}" id="" cols="30" rows="10"   class="field-style field-full align-none" placeholder="comments to parent"   ></textarea>
+
+        </li>
+
+
+        <li>
+        <input  type="date"  requiredname="" value="{{report_Update.date_created}}" class="field-style field-split align-right" placeholder="date" />
+        </li>
+
+        <li>
+        <input class="add" style=" color:azure;   background-color: #4e73df;
+        background: #0f8a9d;
+        background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+        background-size: cover;" type="submit"name="" value="Update " />
+        <a class="a_link    " href="/" style="background-color: #4e73df;
+        background: linear-gradient(57deg, #00C6A7 , #1E4D92 );
+        background-size: cover;text-decoration: none;"> <i class="fas fa-arrow-alt-circle-right "> Done</i></a>
+
+        </li>
+        </ul>
+       
+        {%endblock content%}

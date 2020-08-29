@@ -1,0 +1,271 @@
+
+
+
+
+{%extends 'base.html' %}
+
+{%load static%}  
+{%block content%}
+
+<link rel="stylesheet" href="{%static 'css/form.css' %}">
+
+
+
+
+    
+     
+  
+     <!-- <body  style="width: 100%;background:cadetblue;color:white;"> -->
+
+ 
+  
+  
+ 
+
+
+ 
+ 
+
+ <form class="form-style-9" style="
+ background: black;color:white;
+
+ background-size:cover;border-top:89px;border-right:89px;border-bottom:89px;border-width:8px"   >
+     {% csrf_token %}
+
+    
+     <a class="a_link" title="close form" href="/view/" style="background-color: #4e73df;
+     background: #0f8a9d;
+ background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+     background-size: cover;text-decoration: none;margin-left:90%">X</a>
+
+     <ul>
+      
+         <li>
+         <h1 style="color:white;background-color: #4e73df;
+            background: linear-gradient(57deg, #00C6A7 , #1E4D92 );
+            background-size: cover;text-decoration: none;"> <i class="fas fa-arrow-alt-circle-right "> UNI-AFRIKAWORLD REPORT</i></h1>
+         </li>
+
+         
+     <li  style=" color: white;">
+        
+         
+          
+         
+             <i class="fas fa-certificate  ">   UNI-AFRIKA EDUCATIONAL MONTHLY PROGRESS REPORT</i>
+            
+           
+    
+     
+     </li>
+     <li>
+        <label >* Date:</label>
+        <p class="field-style field-full align-none">{{student_report.date_created}}</p> 
+            
+
+
+        
+     </li>
+     <li>
+        <label >* Name of Student:</label>
+        <p class="field-style field-full align-none">{{student_report.student_name}}</p> 
+        <label >* Subject:</label>
+        <p class="field-style field-full align-none">{{student_report.subject_name}}</p> 
+        
+         
+         
+         
+     
+     </li>
+
+   
+     <li>
+
+        <label >* Class:</label>
+        <p class="field-style field-full align-none">{{student_report.Class}}</p> 
+        
+
+
+         
+     </li>
+     <li>
+
+        <label >* Topic Treated:</label>
+        <p class="field-style field-full align-none">{{student_report.topic_treated}}</p> 
+        
+
+         
+     </li>
+
+
+         <li>
+
+            <label >* Challenges Before:</label>
+            <p class="field-style field-full align-none">{{student_report.challenges}}</p> 
+            
+            
+             </li>
+
+         <li>
+            <label >* Improvement Areas:</label>
+            <p class="field-style field-full align-none">{{student_report.improvement}}</p> 
+            
+
+
+            
+             </li>
+
+     
+
+             <li>
+
+                <label >* Projection:</label>
+                <p class="field-style field-full align-none">{{student_report.projection}}</p> 
+                
+
+
+
+                 
+                 </li>
+
+
+                 <li  style=" color: white;">
+        
+         
+          
+         
+                     <i class="fas fa-certificate  ">   Metrics (over 10)</i>
+                    
+                   
+            
+             
+             </li>
+
+
+             <li>
+
+                <label >* Attitude to Assignments:</label>
+                <p class="field-style field-full align-none">{{student_report.attitude}}</p> 
+                
+
+                 
+                 </li>
+
+
+
+
+                 <li>
+
+                    <label >* Execution of Housework:</label>
+                    <p class="field-style field-full align-none">{{student_report.execution}}</p> 
+                      
+                 
+                    
+                     </li>
+
+                     
+
+                      <li>
+                        <label >* Cognitive Ability(reasoning & retention power):</label>
+                        <p class="field-style field-full align-none">{{student_report.ability}}</p> 
+                          
+                     
+
+                
+
+                 </li>
+
+
+
+                 <li  style=" color: white;">
+        
+         
+          
+         
+                     <i class="fas fa-certificate  ">  General Comments  (Instructor)</i>
+                    
+                   
+            
+             
+             </li>
+
+
+             
+             <li>
+
+                 <label >* Instructor's Name:</label>
+                 <p class="field-style field-full align-none">{{student_report.instructor_name}}</p> 
+                 </li>
+
+                 <li>
+                    <label >* Instructor's comments:</label>
+                 <p class="field-style field-full align-none">{{student_report.instructor_comment}}</p> 
+                   
+                     </li>
+
+
+                     <li  style=" color: white;">
+        
+         
+          
+         
+                         <i class="fas fa-certificate  "> Administration (Comments)</i>
+                        
+                       
+                
+                 
+                 </li>
+                 <li style="color: white;">
+                     To Instructor
+                 </li>
+                 <li>
+                    <label  >* comments to instructor:</label>
+                 <p class="field-style field-full align-none">{{student_report.comment_to_instructor}}</p> 
+                     
+                     </li>
+
+                 <li style="color:white">To Parent</li>
+
+                 <li>
+
+                    <label >* comments to parent:</label>
+                    <p class="field-style field-full align-none">{{student_report.comment_to_parent}}</p> 
+                        
+
+                     
+
+                     </li>
+
+
+
+
+
+
+
+     
+  
+     
+     
+     <li>
+    
+     <a class="a_link    " href="." style="background-color: #4e73df;
+     background: linear-gradient(57deg, #00C6A7 , #1E4D92 );
+     background-size: cover;text-decoration: none;"> <i class="fas fa-arrow-alt-circle-right "> BASED ON STUDENT MONTHLY REPORT UNI-AFRIKAWORLD</i></a>
+ 
+     </li>
+     </ul>
+     </form>
+     
+     
+
+
+
+
+     
+ {%endblock content%}
+
+
+
+
+
+

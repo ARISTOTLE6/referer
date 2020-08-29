@@ -1,0 +1,57 @@
+
+
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colMS">
+        
+        <h1>Report Details</h1>
+        
+<div id="content-main">
+
+
+    
+        <div class="app-account module">
+         
+        <table>
+        <caption>
+            <a href="#" class="section" title="Models in the Accounts application">STUDENT REPORTS LIST</a>
+        </caption>
+      
+            <tr class="model-emailaddress">
+                {%for student_reports in student_report %} 
+                <th scope="row"><a href="/student_report/{{student_reports.id}}/">{{student_reports.student_name}}</a></th>
+           
+                
+             
+            
+                <td><a href="/test/" class="addlink">Add</a></td>
+            
+                
+                
+                <td><a href="/update/{{student_reports.id}}/" class="changelink">Change</a></td>
+             
+            </tr>
+            {%endfor%}
+          
+
+                
+        </table>
+        </div>
+    
+       
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+
+{%endblock content%}

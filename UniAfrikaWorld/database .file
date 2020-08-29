@@ -1,0 +1,14 @@
+Host
+ec2-34-197-212-240.compute-1.amazonaws.com
+Database
+d72uil7bqg6omf
+User
+rxszklmalinhkc
+Port
+5432
+Password
+194a38eda2bb65a08a3030860f3844d045ef3d0edd1233b9ed64a5ee59d432fc
+URI
+postgres://rxszklmalinhkc:194a38eda2bb65a08a3030860f3844d045ef3d0edd1233b9ed64a5ee59d432fc@ec2-34-197-212-240.compute-1.amazonaws.com:5432/d72uil7bqg6omf
+Heroku CLI
+heroku pg:psql postgresql-horizontal-09966 --app myreferer

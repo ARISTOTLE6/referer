@@ -1,0 +1,63 @@
+
+
+{%extends 'base.html' %}
+{%load static%}
+{%block content %}
+
+
+
+<br>
+
+<table style="background-color: black;color:white" class="Aristide3-table Aristide3-striped Aristide3-bordered">
+   
+    <thead>
+    <tr style=" width:inherit; background-color: black;color:white">
+        <th>Student Name</th>
+        <th>Date</th>
+        <th>Improvement</th>
+        <th>Subject</th>
+        <th>Ability</th>
+        <th>Attitude </th>
+        <th>Instructor's Comment</th>
+        <th>Comment to Instructor</th>
+        <th>Comment to Parent</th>
+      
+        
+    </tr>
+    
+    
+    </thead>
+    
+        
+    <tbody>
+   
+    <tr>
+         {% csrf_token %}
+     {% for report_tables in report_table %}
+    <td>{{report_tables.student_name}}</td>
+    <td>{{report_tables.date_created}}</td>
+    <td>{{report_tables.improvement}}</td>
+    <td>{{report_tables.subject_name}}</td>
+    <td><a href="/update/{{report_tables.id}}"  title="edit contents"></a>{{report_tables.ability}}</td>
+    <td> <a href="/update/{{report_tables.id}}"  title="edit contents"> {{report_tables.attitude}}</a></td> 
+    <td>{{report_tables.instructor_comment}}</td>
+    <td>{{report_tables.comment_to_instructor}}</td>
+    <td>{{report_tables.comment_to_parent}}</td>
+   
+    <td> 
+  
+     <td><a href="/test/" class="addlink">Add</a></td>
+    <!-- <a href="/delete/{{report_tables.id}}/"  title="delete content" ><img width="20px" src="{%static  'images/delete.jpg' %}" alt="not found"></a> -->
+    </td>
+     <td>
+        <td><a href="/update/{{report_tables.id}}/" class="changelink">Change</a></td>
+   
+    </td> 
+     
+    </tr>
+     {% endfor %} 
+    </tbody>
+    
+    </table>
+    {%endblock content%}
+    

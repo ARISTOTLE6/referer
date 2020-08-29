@@ -1,0 +1,50 @@
+{%extends 'base.html' %}
+{%load static %}
+{%load staticfiles %}
+{%block content%}
+<link rel="stylesheet" href="{%static 'css/form.css' %} ">
+
+{%for report in reports%}
+
+<div class="form-style-9" style="
+background: black;
+color:white;
+
+background-size:cover;border-top:89px;border-right:89px;border-bottom:89px;border-width:8px" >
+    
+<h1>Uni-AFRIKA EDUCATIONAL (Home Lesson Nigeria Tees )</h1> 
+
+ <h3>MONTHLY PROGRESS REPORT FOR JULY 2020</h3> 
+
+
+<p> <h4>NAME:</h4>{{report.student_name}}</p>
+<p> <h4>Date :  {{report.date_created}}</h4></p>
+
+<p>Subject: {{report.subject_name}}</p>
+
+<p>Topics Treated :</p>
+
+{{report.topic_treated}}
+
+<p> Earlier Challenges:</p>
+
+ |{{report.challenges}}
+  
+<p><h4> IMPROVEMENT</h4> </p>
+    
+
+   |  {{report.improvement}}
+
+   
+
+     
+
+   
+   
+   
+
+</div>
+
+{%endfor%}
+
+{%endblock content%}
